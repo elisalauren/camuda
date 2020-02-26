@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Heimplatzanmeldung</title>
+</h:head>
+<h:body>
+	<h2>Heimplatzanmeldung</h2>
+	<h:form>
+		<h:panelGrid columns="2">
+			<p:outputLabel for="name">Name:</p:outputLabel>
+			<p:inputText id="name" value="#{retirementHomeController.model.name}"></p:inputText>
+
+			<p:outputLabel for="address">Adresse:</p:outputLabel>
+			<p:inputText id="address"
+				value="#{retirementHomeController.model.address}"></p:inputText>
+
+			<p:outputLabel for="degree">Pflegegrad:</p:outputLabel>
+			<p:inputNumber id="degree"
+				value="#{retirementHomeController.model.degree}"></p:inputNumber>
+
+			<p:outputLabel for="doctor">Hausarzt:</p:outputLabel>
+			<p:inputText id="doctor"
+				value="#{retirementHomeController.model.doctor}"></p:inputText>
+
+		</h:panelGrid>
+		<br/>
+		<p:commandButton value="Start Process"
+			actionListener="#{retirementHomeController.startProcess()}"></p:commandButton>
+	</h:form>
+</h:body>
+</html>
